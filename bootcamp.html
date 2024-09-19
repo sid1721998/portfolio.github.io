@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Bootcamp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.3.2/tailwind.min.css">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #0d0d0d;
+            color: #c9d1d9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .terminal {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+            background: #0d0d0d;
+            border: 2px solid #333;
+            border-radius: 5px;
+            position: relative;
+            font-size: 16px;
+        }
+
+        .terminal::before {
+            content: "✖️";
+            position: absolute;
+            top: 10px;
+            right: 50px;
+            font-size: 18px;
+            color: #ff5c5c;
+        }
+
+        .terminal-header {
+            font-size: 14px;
+            color: #6a737d;
+            margin-bottom: 20px;
+        }
+
+        .terminal-body {
+            background-color: #1e1e1e;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+
+        h2 {
+            color: #ff5c5c;
+            margin-top: 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            position: relative;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #2a2a2a;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+
+        li:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8);
+            background-color: #333;
+        }
+
+        li a {
+            color: #c9d1d9;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .highlighted {
+            background-color: #4a4e69;
+            color: #ffffff;
+            border: 2px solid #ff5c5c;
+            box-shadow: 0 0 15px rgba(255, 92, 92, 0.5);
+            font-size: 18px;
+        }
+
+        .highlighted:hover {
+            background-color: #5a6b8c;
+            border-color: #ff5c5c;
+            box-shadow: 0 0 20px rgba(255, 92, 92, 0.7);
+        }
+
+        .highlighted::before {
+            content: "⚔️";
+            position: absolute;
+            left: -35px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #ff5c5c;
+            z-index: 1;
+        }
+
+        li:hover::before {
+            content: "🖤";
+            color: #ff5c5c;
+        }
+
+        .icon {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <span>user@kali:~$</span>
+        </div>
+        <div class="terminal-body">
+            <h2>Bootcamp</h2>
+            <p>I am currently expanding my knowledge through an intensive cybersecurity bootcamp, focusing on skills such as penetration testing, ethical hacking, network security, and cryptography. The bootcamp allows me to work hands-on with real-world scenarios, further honing my technical abilities in securing digital infrastructures.</p>
+            <p>Here are some of the core topics I'm covering:</p>
+            <ul>
+                <li><i class="icon fas fa-lock"></i><a href="">Introduction to Cybersecurity</a></li>
+                <li><i class="icon fas fa-linux"></i><a href="">Linux Basics</a></li>
+                <li><i class="icon fas fa-network-wired"></i><a href="">Networking Fundamentals</a></li>
+                <li><i class="icon fas fa-shield-alt"></i><a href="">Cryptography</a></li>
+                <li class="highlighted">
+                    <i class="icon fas fa-hacker"></i><a href="">Penetration Testing: Footprinting, Scanning, and Exploitation</a>
+                </li>
+                <li><i class="icon fas fa-code"></i><a href="">Python Programming</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Course Overview Section -->
+<!-- Course Overview Section -->
+<section id="cybersecurity-overview" class="course-overview">
+    <h2>Introduction to Cybersecurity</h2>
+    <p>Completed <strong>Cybersecurity Terminology & Concepts</strong> through <span style="color: #64ffda;">Code Labs Academy (CLA)</span>.</p>
+
+    <div class="key-concepts">
+        <h3><span class="icon">🔑</span> Key Concepts</h3>
+        <ul>
+            <li><strong>Cybersecurity Fundamentals:</strong> Understanding of core principles like threats, vulnerabilities, and risk.</li>
+            <li><strong>Cybersecurity Teams:</strong> Explored the roles of Red Teams (offensive) and Blue Teams (defensive).</li>
+            <li><strong>Ethical Hacking Phases:</strong> Familiar with the 5-step process: Reconnaissance, Scanning, Gaining Access, Maintaining Access, and Covering Tracks.</li>
+            <li><strong>Malware Types:</strong> Studied viruses, worms, trojans, ransomware, spyware, and adware.</li>
+            <li><strong>Phishing:</strong> Awareness of tactics used in phishing attacks and methods to detect and prevent them.</li>
+            <li><strong>Firewalls:</strong> Implemented network security using firewalls, understanding types and packet filtering.</li>
+            <li><strong>Encryption & Decryption:</strong> Mastered data security through encryption techniques to ensure confidentiality.</li>
+        </ul>
+    </div>
+
+    <div class="real-world">
+        <h3><span class="icon">🌐</span> Real-World Applications</h3>
+        <ul>
+            <li>Performed penetration testing and vulnerability assessments.</li>
+            <li>Developed secure networks using industry-standard tools and techniques.</li>
+            <li>Engaged in ethical hacking exercises to reinforce theoretical knowledge.</li>
+        </ul>
+    </div>
+
+    <div class="legal-ethics">
+        <h3><span class="icon">⚖️</span> Legal & Ethical Considerations</h3>
+        <ul>
+            <li>Adhered to the legal boundaries of ethical hacking.</li>
+            <li>Studied relevant cybersecurity provisions, including data protection laws.</li>
+        </ul>
+    </div>
+</section>
+
+<style>
+    /* Course Overview Section */
+    .course-overview {
+        padding: 50px 20px;
+        background-color: #112240;
+        color: #ccd6f6;
+        max-width: 1000px;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        text-align: left;
+    }
+
+    .course-overview h2 {
+        font-size: 2.5rem;
+        color: #64ffda;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .course-overview p {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 30px;
+        color: #8892b0;
+    }
+
+    .course-overview h3 {
+        font-size: 1.8rem;
+        color: #64ffda;
+        margin-bottom: 15px;
+    }
+
+    .course-overview .icon {
+        font-size: 1.5rem;
+        margin-right: 10px;
+    }
+
+    .course-overview ul {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .course-overview ul li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        color: #ccd6f6;
+    }
+
+    .course-overview ul li::before {
+        content: "✔️";
+        position: absolute;
+        left: 0;
+        top: 2px;
+        color: #64ffda;
+        font-size: 1.2rem;
+    }
+
+    /* Section Blocks */
+    .key-concepts, .real-world, .legal-ethics {
+        margin-bottom: 30px;
+    }
+
+    .course-overview strong {
+        color: #ccd6f6;
+    }
+    a:link{
+        color: red;
+  background-color: transparent;
+  text-decoration: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .course-overview {
+            padding: 30px 15px;
+        }
+
+        .course-overview h2 {
+            font-size: 2rem;
+        }
+
+        .course-overview h3 {
+            font-size: 1.5rem;
+        }
+
+        .course-overview ul li {
+            font-size: 1rem;
+        }
+    }
+</style>
+<!-- Linux Basics Section -->
+<section id="linux-basics-overview" class="linux-basics-overview">
+    <h2>Linux Basics</h2>
+    <p>Completed <strong>Linux Basics</strong> through <span style="color: #64ffda;">Code Labs Academy (CLA)</span>.</p>
+
+    <div class="key-concepts">
+        <h3><span class="icon">🔑</span> Key Concepts</h3>
+        <ul>
+            <li><strong>What is Linux:</strong> Understanding Linux as an open-source operating system known for stability and versatility.</li>
+            <li><strong>Linux Distributions:</strong> Exploration of different Linux distributions like Ubuntu, CentOS, and Debian, each with unique features and package management systems.</li>
+            <li><strong>The Terminal, Shell, and Bash:</strong> Mastery of the command-line interface, including <span class="command">Bash</span> as a common shell for executing commands and scripting.</li>
+            <li><strong>Linux Kernel:</strong> Insight into the Linux kernel, its role as the core component managing hardware resources and system calls.</li>
+            <li><strong>Basic Linux Architecture:</strong> Familiarity with the File Hierarchy Standard (FHS) and directory structure.</li>
+            <li><strong>Directory and File Management:</strong> Competence in managing directories and files using commands like <span class="command">`ls`</span>, <span class="command">`cd`</span>, <span class="command">`mkdir`</span>, and <span class="command">`rm`</span>.</li>
+            <li><strong>Linux Filters and I/O Redirection:</strong> Ability to manipulate data and manage input/output using filters like <span class="command">`grep`</span>, <span class="command">`sort`</span>, and redirection operators.</li>
+            <li><strong>Help and Man Pages:</strong> Utilization of <span class="command">`man`</span> pages and command-line help for reference and troubleshooting.</li>
+            <li><strong>Users and Group Management:</strong> Skills in managing users and groups, including commands for creation, modification, and deletion.</li>
+            <li><strong>Package Management:</strong> Knowledge of package managers like APT, YUM, and Pacman for software installation and updates.</li>
+            <li><strong>System and Hardware Information:</strong> Techniques for gathering system and hardware details using commands like <span class="command">`uname`</span>, <span class="command">`lshw`</span>, <span class="command">`df`</span>, and <span class="command">`free`</span>.</li>
+            <li><strong>Process and Service Management:</strong> Management of processes and services using commands such as <span class="command">`ps`</span>, <span class="command">`kill`</span>, and <span class="command">`systemctl`</span>.</li>
+        </ul>
+    </div>
+
+    <div class="real-world">
+        <h3><span class="icon">🌐</span> Real-World Applications</h3>
+        <ul>
+            <li>Performed system administration tasks and scripting in Linux environments.</li>
+            <li>Configured and managed Linux distributions for various applications and environments.</li>
+            <li>Applied knowledge to troubleshoot and optimize system performance effectively.</li>
+        </ul>
+    </div>
+
+    <div class="legal-ethics">
+        <h3><span class="icon">⚖️</span> Legal & Ethical Considerations</h3>
+        <ul>
+            <li>Understood the implications of system permissions and user management in a legal context.</li>
+            <li>Studied best practices for ethical use of system resources and data handling.</li>
+        </ul>
+    </div>
+</section>
+
+<style>
+    /* Linux Basics Section */
+    .linux-basics-overview {
+        padding: 50px 20px;
+        background-color: #112240;
+        color: #ccd6f6;
+        max-width: 1000px;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        text-align: left;
+    }
+
+    .linux-basics-overview h2 {
+        font-size: 2.5rem;
+        color: #64ffda;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .linux-basics-overview p {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 30px;
+        color: #8892b0;
+    }
+
+    .linux-basics-overview h3 {
+        font-size: 1.8rem;
+        color: #64ffda;
+        margin-bottom: 15px;
+    }
+
+    .linux-basics-overview .icon {
+        font-size: 1.5rem;
+        margin-right: 10px;
+    }
+
+    .linux-basics-overview ul {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .linux-basics-overview ul li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        color: #ccd6f6;
+    }
+
+    .linux-basics-overview ul li::before {
+        content: "✔️";
+        position: absolute;
+        left: 0;
+        top: 2px;
+        color: #64ffda;
+        font-size: 1.2rem;
+    }
+
+    /* Highlight Linux Commands */
+    .command {
+        background-color: #2b2b2b;
+        color: #f8f8f2;
+        border-radius: 3px;
+        padding: 2px 4px;
+        font-family: monospace;
+    }
+
+    /* Section Blocks */
+    .key-concepts, .real-world, .legal-ethics {
+        margin-bottom: 30px;
+    }
+
+    .linux-basics-overview strong {
+        color: #ccd6f6;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .linux-basics-overview {
+            padding: 30px 15px;
+        }
+
+        .linux-basics-overview h2 {
+            font-size: 2rem;
+        }
+
+        .linux-basics-overview h3 {
+            font-size: 1.5rem;
+        }
+
+        .linux-basics-overview ul li {
+            font-size: 1rem;
+        }
+    }
+</style>
+<!-- Networking Fundamentals Section -->
+<section id="networking-fundamentals" class="networking-fundamentals">
+    <h2>Networking Fundamentals</h2>
+    <p>Completed <strong>Networking Fundamentals</strong> through <span style="color: #64ffda;">Code Labs Academy (CLA)</span>.</p>
+
+   
+
+    <div class="key-concepts">
+        <h3><span class="icon">🔑</span> Key Concepts</h3>
+        <ul>
+            <li><strong>Introduction to Computer Networks:</strong> A <span class="term">collection of interconnected computing devices</span> for communication, data sharing, and resource access.</li>
+            <li><strong>Network Layers:</strong> Understanding the <span class="layer">Physical</span>, <span class="layer">Data Link</span>, <span class="layer">Network</span>, <span class="layer">Transport</span>, and <span class="layer">Application</span> layers.</li>
+            <li><strong>Addressing Basics:</strong> <span class="term">IP Address</span> and <span class="term">MAC Address</span> basics.</li>
+            <li><strong>Switches and Routers:</strong> Key differences between <span class="device">Switches</span> and <span class="device">Routers</span>.</li>
+            <li><strong>Network Models:</strong> The <span class="model">OSI</span> and <span class="model">TCP/IP</span> models.</li>
+            <li><strong>Packet Structure and Sockets:</strong> Understanding <span class="term">Packet Structure</span> and <span class="term">Sockets</span>.</li>
+            <li><strong>DNS Servers and Their Functionality:</strong> Role of <span class="term">DNS Servers</span> in resolving domain names to IP addresses.</li>
+        </ul>
+    </div>
+
+    <div class="real-world">
+        <h3><span class="icon">🌐</span> Real-World Applications</h3>
+        <ul>
+            <li>Applied knowledge in real-world network configurations and troubleshooting.</li>
+            <li>Utilized tools and techniques for effective network management and optimization.</li>
+        </ul>
+    </div>
+
+    <div class="legal-ethics">
+        <h3><span class="icon">⚖️</span> Legal & Ethical Considerations</h3>
+        <ul>
+            <li>Understanding of network security and privacy considerations.</li>
+            <li>Adhering to best practices in data handling and network management.</li>
+        </ul>
+    </div>
+</section>
+
+<style>
+    /* Networking Fundamentals Section */
+    .networking-fundamentals {
+        padding: 50px 20px;
+        background-color: #112240;
+        color: #ccd6f6;
+        max-width: 1000px;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        text-align: left;
+    }
+
+    .networking-fundamentals h2 {
+        font-size: 2.5rem;
+        color: #36ffe1; /* Light Blue */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .networking-fundamentals p {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 30px;
+        color: #8892b0;
+    }
+
+    .networking-fundamentals h3 {
+        font-size: 1.8rem;
+        color: #8957f8; /* Purple */
+        margin-bottom: 15px;
+    }
+
+    .networking-fundamentals .icon {
+        font-size: 1.5rem;
+        margin-right: 10px;
+    }
+
+    .networking-fundamentals ul {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .networking-fundamentals ul li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        color: #ccd6f6;
+    }
+
+    .networking-fundamentals ul li::before {
+        content: "✔️";
+        position: absolute;
+        left: 0;
+        top: 2px;
+        color: #36ffe1; /* Light Blue */
+        font-size: 1.2rem;
+    }
+
+    /* Highlight Different Terms */
+    .term {
+        background-color: #2b2b2b;
+        color: #f8f8f2;
+        border-radius: 3px;
+        padding: 2px 4px;
+        font-family: monospace;
+    }
+
+    .layer {
+        background-color: #142cd1; /* Dark Blue */
+        color: #ffffff;
+        border-radius: 3px;
+        padding: 2px 4px;
+        font-family: monospace;
+    }
+
+    .device {
+        background-color: #8957f8; /* Purple */
+        color: #ffffff;
+        border-radius: 3px;
+        padding: 2px 4px;
+        font-family: monospace;
+    }
+
+    .model {
+        background-color: #36ffe1; /* Light Blue */
+        color: #112240;
+        border-radius: 3px;
+        padding: 2px 4px;
+        font-family: monospace;
+    }
+
+    /* Section Blocks */
+    .roadmap, .key-concepts, .real-world, .legal-ethics {
+        margin-bottom: 30px;
+    }
+
+    .networking-fundamentals strong {
+        color: #ccd6f6;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .networking-fundamentals {
+            padding: 30px 15px;
+        }
+
+        .networking-fundamentals h2 {
+            font-size: 2rem;
+        }
+
+        .networking-fundamentals h3 {
+            font-size: 1.5rem;
+        }
+
+        .networking-fundamentals ul li {
+            font-size: 1rem;
+        }
+    }
+</style>
+<!-- Cryptography Section -->
+<section id="cryptography" class="cryptography">
+    <h2>Cryptography</h2>
+    <p>Completed <strong>Cryptography</strong> through <span style="color: #64ffda;">Code Labs Academy (CLA)</span>.</p>
+
+
+  
+
+    <div class="key-concepts">
+        <h3><span class="icon">🔑</span> Key Concepts</h3>
+        <ul>
+            <li><strong>Definition:</strong> Study of mathematical techniques for securing digital information against adversarial attacks.</li>
+            <li><strong>Daily Use:</strong> Employed for privacy and encrypting messages with keys for confidentiality. <span class="example">Example:</span> WhatsApp encrypts conversations to prevent hacking or interception.</li>
+            <li><strong>Importance of Cryptography:</strong> Integral to modern life; without it, bank transactions, internet traffic, and cell phones fail, exposing sensitive information.</li>
+            <li><strong>Cryptographic Algorithms Types:</strong> Includes <span class="algorithm">Symmetric-key</span>, <span class="algorithm">Asymmetric-key</span>, <span class="algorithm">Stream Ciphers</span>, and <span class="algorithm">Block Ciphers</span>.</li>
+            <li><strong>Symmetric-key Algorithms:</strong> Uses a single key for both encryption and decryption. Examples: <span class="example">AES</span>, DES, 3DES.</li>
+            <li><strong>Asymmetric-key Algorithms:</strong> Uses separate keys for encryption and decryption. Examples: <span class="example">RSA</span>, Elliptic Curve Cryptography (ECC).</li>
+            <li><strong>Stream Ciphers:</strong> Encrypt one bit or byte at a time with dynamic key changes. Examples: A5/1, RC4.</li>
+            <li><strong>Block Ciphers:</strong> Encrypt fixed-size blocks of data. Example: <span class="example">Feistel Cipher</span>.</li>
+            <li><strong>Classical Cryptography:</strong> Focuses on designing and using codes (ciphers) for secure communication. Examples: Caesar Cipher, Rail Fence Cipher.</li>
+            <li><strong>Modern Cryptography:</strong> Involves mathematical methods to secure communication. Objectives include confidentiality, integrity, authenticity, and non-repudiation.</li>
+            <li><strong>Hashing:</strong> Converts data into a fixed-size hash value. Examples: MD5, SHA-1, SHA-2, SHA-3.</li>
+        </ul>
+    </div>
+
+    <div class="real-world">
+        <h3><span class="icon">🌐</span> Real-World Applications</h3>
+        <ul>
+            <li>Applied in secure communication, online banking, and data protection.</li>
+            <li>Utilized in tools and techniques for network security and data integrity.</li>
+        </ul>
+    </div>
+
+    <div class="legal-ethics">
+        <h3><span class="icon">⚖️</span> Legal & Ethical Considerations</h3>
+        <ul>
+            <li>Understanding network security and privacy considerations.</li>
+            <li>Adhering to best practices in data handling and encryption.</li>
+        </ul>
+    </div>
+</section>
+
+<style>
+    /* Cryptography Section */
+    .cryptography {
+        padding: 50px 20px;
+        background-color: #112240;
+        color: #ccd6f6;
+        max-width: 1000px;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        text-align: left;
+    }
+
+    .cryptography h2 {
+        font-size: 2.5rem;
+        color: #36ffe1; /* Light Blue */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .cryptography p {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 30px;
+        color: #8892b0;
+    }
+
+    .cryptography h3 {
+        font-size: 1.8rem;
+        color: #8957f8; /* Purple */
+        margin-bottom: 15px;
+    }
+
+    .cryptography .icon {
+        font-size: 1.5rem;
+        margin-right: 10px;
+    }
+
+    .cryptography ul {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .cryptography ul li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        color: #ccd6f6;
+    }
+
+    .cryptography ul li::before {
+        content: "✔️";
+        position: absolute;
+        left: 0;
+        top: 2px;
+        color: #36ffe1; /* Light Blue */
+        font-size: 1.2rem;
+    }
+
+    /* Highlight Different Terms */
+    .example {
+        background-color: #2b2b2b;
+        color: #f8f8f2;
+        border-radius: 3px;
+        padding: 2px 4px;
+        font-family: monospace;
+    }
+
+    .algorithm {
+        background-color: #142cd1; /* Dark Blue */
+        color: #ffffff;
+        border-radius: 3px;
+        padding: 2px 4px;
+        font-family: monospace;
+    }
+
+    .layer {
+        background-color: #36ffe1; /* Light Blue */
+        color: #112240;
+        border-radius: 3px;
+        padding: 2px 4px;
+        font-family: monospace;
+    }
+
+    .cryptography .key-concepts, .cryptography .real-world, .cryptography .legal-ethics {
+        margin-bottom: 30px;
+    }
+
+    .cryptography strong {
+        color: #ccd6f6;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .cryptography {
+            padding: 30px 15px;
+        }
+
+        .cryptography h2 {
+            font-size: 2rem;
+        }
+
+        .cryptography h3 {
+            font-size: 1.5rem;
+        }
+
+        .cryptography ul li {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Tomislav Vrbicic. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
